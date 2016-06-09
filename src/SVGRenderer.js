@@ -22,15 +22,15 @@ class SVGRenderer extends Component {
   }
 
   render() {
-    let {background, objects, svgStyle, canvas,
+    let {background, objects, svgStyle, canvas, 
          onMouseDown, onRender} = this.props;
     let {width, height, canvasOffsetX, canvasOffsetY} = canvas;
 
     let style = [
-      styles.canvas,
+      styles.canvas, 
       background ? {
         backgroundColor: background
-      }: styles.grid,
+      }: styles.grid, 
       {
         ...svgStyle,
         marginTop: canvasOffsetY,
@@ -41,7 +41,7 @@ class SVGRenderer extends Component {
     return (
       <svg onMouseDown={onMouseDown}
          ref={onRender}
-         width={width}
+         width={width} 
          height={height}
          style={style}>
         {objects.map(this.renderObject.bind(this))}
