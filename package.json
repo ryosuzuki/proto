@@ -2,13 +2,9 @@
   "name": "proto",
   "version": "0.0.1",
   "description": "",
-  "main": "./lib/index.js",
+  "main": "./app.js",
   "scripts": {
-    "start": "node server.js",
-    "deploy": "NODE_ENV=production webpack -p --config webpack.production.js",
-    "build": "babel -d lib/ src/",
-    "clean": "rimraf lib",
-    "prepublish": "npm run clean && npm run build"
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",
@@ -22,7 +18,7 @@
   "homepage": "https://github.com/ryosuzuki/proto#readme",
   "dependencies": {
     "classnames": "^2.2.5",
-    "lodash": "^4.13.1",
+    "lodash": "^3.10.1",
     "radium": "^0.17.1",
     "react": "^15.1.0",
     "react-color": "^2.2.0",
